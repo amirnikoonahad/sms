@@ -1,0 +1,13 @@
+@model tbl_sms
+
+@if (ViewBag.msg != null)
+{
+    <p class="alert alert-danger">@ViewBag.msg</p>
+}
+
+
+<form action="/home/check" method="post">
+
+    <input type="text" class="form-control" style="border:1px solid blue" asp-for="code" >
+    <button type="submit" class="btn btn-primary mt-3">check</button>
+</form>
